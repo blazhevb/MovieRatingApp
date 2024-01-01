@@ -2,6 +2,8 @@
 {
     public class Icons
     {
-        public const string Popcorn = "\u0061";
+        public const string FONT_FAMILY = "Refreshbonus";
+        public const string EmptyIndicator = "p";
+        public const string FullIndicator = "q";
     }
 }

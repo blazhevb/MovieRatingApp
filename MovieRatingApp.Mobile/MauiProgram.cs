@@ -13,7 +13,7 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                fonts.AddFont("Fast Food Icons.ttf", "FastFoodIcons");
+                fonts.AddFont("Refreshbonus-Regular.ttf", "Refreshbonus");
             });
 
 #if DEBUG
