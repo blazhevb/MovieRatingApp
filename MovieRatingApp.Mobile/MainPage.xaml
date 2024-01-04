@@ -24,7 +24,7 @@
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-            <controls:RatingView Size="100" Value="3"></controls:RatingView>
+            <controls:RatingView HorizontalOptions="Center" Color="LightBlue"/>
             <Button
                 x:Name="CounterBtn"
                 Text="Click me" 
