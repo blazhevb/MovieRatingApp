@@ -20,13 +20,23 @@ public class NativeRatingView : LinearLayout
         _value = value;
         this.RemoveAllViews();
 
-        for(int i = 0; i < _maxValue; i++)
+        int imageSizeInDp = 24;
+        float scale = Context.Resources.DisplayMetrics.Density;
+        int imageSizeInPx = (int)(imageSizeInDp * scale + 0.5f);
+
+        for (int i = 0; i < _maxValue; i++)
         {
             var imageView = new ImageView(Context);
+
+            var layoutParams = new LinearLayout.LayoutParams(imageSizeInPx, imageSizeInPx);
+            imageView.LayoutParameters = layoutParams;
+
             Icon icon = Icon.CreateWithResource(Context, i < _value ? _Microsoft.Android.Resource.Designer.ResourceConstant.Drawable.popcorn_full_icon : Resource.Drawable.popcorn_empty_icon);
             imageView.SetImageIcon(icon);
+
             int ratingValue = i + 1;
             imageView.Click += (sender, e) => UpdateRating(ratingValue);
+
             this.AddView(imageView);
         }
     }
