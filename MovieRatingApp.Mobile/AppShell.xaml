@@ -8,7 +8,7 @@
     Title="MovieRatingApp.Mobile">
 
     <ShellContent
-        Title="Home"
+        Title="Movie Ratings"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
