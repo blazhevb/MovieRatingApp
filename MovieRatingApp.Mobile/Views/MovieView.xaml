@@ -3,14 +3,15 @@
              xmlns:controls="clr-namespace:MovieRatingApp.Mobile.Controls"
              x:Class="MovieRatingApp.Mobile.Views.MovieView">
 
+    <Frame Padding="0" CornerRadius="10" HasShadow="True" Margin="50,5,50,5" BackgroundColor="White">
         <VerticalStackLayout>
-            <StackLayout >
-                <Image Source="{Binding ImageUrl}" Aspect="AspectFit" />
-            </StackLayout>
+            <Image Source="{Binding ImageUrl}" Aspect="AspectFit" />
             <VerticalStackLayout Padding="10">
                 <Label Text="{Binding Title}" FontAttributes="Bold"/>
                 <Label Text="{Binding Description}"/>
-            <controls:RatingView Value="{Binding Rating, Mode=TwoWay}" Color="LightBlue"/>
+                <controls:RatingView Value="{Binding Rating, Mode=TwoWay}" Color="Transparent"/>
             </VerticalStackLayout>
         </VerticalStackLayout>
+    </Frame>
+        
 </ContentView>
