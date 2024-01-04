@@ -16,19 +16,7 @@ namespace MovieRatingApp.Mobile.ViewModels
 
         public MoviesViewModel() 
         {
-            Movies = new ObservableCollection<Movie>
-        {
-            // Add some sample movies here
-            new Movie { Title = "Inception", Description = "A movie about dreams within dreams.", ImageUrl = "dotnet_bot.png", Rating = 1 },
-            new Movie { Title = "Inception", Description = "A movie about dreams within dreams.", ImageUrl = "dotnet_bot.png", Rating = 5 },
-            new Movie { Title = "Inception", Description = "A movie about dreams within dreams.", ImageUrl = "dotnet_bot.png", Rating = 3 },
-            new Movie { Title = "Inception", Description = "A movie about dreams within dreams.", ImageUrl = "dotnet_bot.png", Rating = 5 },
-            new Movie { Title = "Inception", Description = "A movie about dreams within dreams.", ImageUrl = "dotnet_bot.png", Rating = 2 },
-            new Movie { Title = "Inception", Description = "A movie about dreams within dreams.", ImageUrl = "dotnet_bot.png", Rating = 5 },
-            new Movie { Title = "Inception", Description = "A movie about dreams within dreams.", ImageUrl = "dotnet_bot.png", Rating = 0 },
-            new Movie { Title = "Inception", Description = "A movie about dreams within dreams.", ImageUrl = "dotnet_bot.png", Rating = 5 },
-            // Add more movies
-        };
+            Movies = new ObservableCollection<Movie>();    
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
