@@ -1,7 +1,5 @@
 ﻿
 
-using MovieRatingApp.Mobile.Resources.FontsMapping;
-
 namespace MovieRatingApp.Mobile.Controls
 {
     public partial class RatingView : ContentView
@@ -24,7 +22,7 @@ namespace MovieRatingApp.Mobile.Controls
                 nameof(Color), 
                 typeof(Color), 
                 typeof(RatingView), 
-                defaultValue: Colors.Yellow);
+                defaultValue: Colors.White);
 
         public Color Color
         {
