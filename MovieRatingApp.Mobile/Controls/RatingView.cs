@@ -2,7 +2,7 @@
 
 namespace MovieRatingApp.Mobile.Controls
 {
-    public partial class RatingView : ContentView
+    public partial class RatingView : HorizontalStackLayout
     {
         public static readonly BindableProperty ValueProperty = 
             BindableProperty.Create(
@@ -22,7 +22,7 @@ namespace MovieRatingApp.Mobile.Controls
                 nameof(Color), 
                 typeof(Color), 
                 typeof(RatingView), 
-                defaultValue: Colors.White);
+                defaultValue: Colors.Transparent);
 
         public Color Color
         {
