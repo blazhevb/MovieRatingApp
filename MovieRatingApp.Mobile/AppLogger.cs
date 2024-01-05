@@ -9,6 +9,7 @@ namespace MovieRatingApp.Mobile
 {
     public static class AppLogger
     {
+        //Basic logger that can be accessed by the viewmodel. Will be replaced with DI and ILogger registered in MauiProgram.
         private static ILogger _logger;
 
         public static void Initialize(ILoggerFactory loggerFactory)

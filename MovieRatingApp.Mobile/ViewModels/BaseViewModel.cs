@@ -22,6 +22,7 @@ namespace MovieRatingApp.Mobile.ViewModels
             }
         }
 
+        //TO DO Use IsLoading with InvertBooleanConverter from MauiCommunity.Toolkit instead
         public bool IsDone => !IsLoading;
 
         public event PropertyChangedEventHandler PropertyChanged;
