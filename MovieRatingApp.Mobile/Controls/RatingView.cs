@@ -4,6 +4,8 @@ namespace MovieRatingApp.Mobile.Controls
 {
     public partial class RatingView : HorizontalStackLayout
     {
+        private const int MAX_VALUE_ALLOWED = 10;
+
         public static readonly BindableProperty ValueProperty = 
             BindableProperty.Create(
                 nameof(Value), 
@@ -40,7 +42,15 @@ namespace MovieRatingApp.Mobile.Controls
         public int MaxRating
         {
             get => (int)GetValue(MaxRatingProperty);
-            set => SetValue(MaxRatingProperty, value);
+            set
+            {
+                if(value < 1)
+                    SetValue(MaxRatingProperty, 1);
+                else if(value > MAX_VALUE_ALLOWED)
+                    SetValue(MaxRatingProperty, MAX_VALUE_ALLOWED);
+                else
+                    SetValue(MaxRatingProperty, value);
+            }
         }
     }
 }
