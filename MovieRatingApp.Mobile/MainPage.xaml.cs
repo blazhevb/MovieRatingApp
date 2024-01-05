@@ -1,4 +1,6 @@
-﻿namespace MovieRatingApp.Mobile;
+﻿using MovieRatingApp.Mobile.ViewModels;
+
+namespace MovieRatingApp.Mobile;
 
 public partial class MainPage : ContentPage
 {
@@ -6,5 +8,16 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    protected override async void OnAppearing()
+    {
+        var viewModel = this.BindingContext as MoviesViewModel;
+        if(viewModel != null)
+        {
+            await viewModel.InitializeAsync();
+        }
+
+        base.OnAppearing();
+    }
 }
 

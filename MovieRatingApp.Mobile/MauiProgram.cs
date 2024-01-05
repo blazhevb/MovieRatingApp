@@ -15,7 +15,6 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                fonts.AddFont("Refreshbonus-Regular.ttf", "Refreshbonus");
             }).ConfigureMauiHandlers(handlers => 
 			{
 				handlers.AddHandler(typeof(RatingView), typeof(RatingViewHandler));
@@ -24,7 +23,10 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+		var app = builder.Build();
 
-		return builder.Build();
+        AppLogger.Initialize(app.Services.GetService<ILoggerFactory>());
+
+        return app;
 	}
 }

@@ -10,13 +10,24 @@
         <viewModels:MoviesViewModel />
     </ContentPage.BindingContext>
 
-
-    <CollectionView ItemsSource="{Binding Movies}">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <views:MovieView />
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
-
+    <Grid>
+        <CollectionView 
+            ItemsSource="{Binding Movies}" 
+            IsVisible="{Binding IsDone}" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <views:MovieView />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+                <Label Text="No movies available to display." 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center"/>
+            </CollectionView.EmptyView>
+        </CollectionView>
+        <ActivityIndicator IsVisible="{Binding IsLoading}"
+            IsRunning="{Binding IsLoading}"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand" />
+    </Grid>
 </ContentPage>
