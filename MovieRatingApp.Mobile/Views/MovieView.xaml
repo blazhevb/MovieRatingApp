@@ -7,11 +7,14 @@
         <VerticalStackLayout>
             <Image Source="{Binding ImageUrl}" Aspect="AspectFit" />
             <VerticalStackLayout Padding="10">
-                <Label Text="{Binding Title}" FontAttributes="Bold"/>
+                <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Large" />
                 <Label Text="{Binding Description}"/>
-                <controls:RatingView Value="{Binding Rating, Mode=TwoWay}" Color="Transparent"/>
+                <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
+                    <Label Text="Rate it:" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium"/>
+                    <controls:RatingView Value="{Binding Rating, Mode=TwoWay}" Color="Transparent"/>
+                </HorizontalStackLayout>
             </VerticalStackLayout>
         </VerticalStackLayout>
     </Frame>
-        
+
 </ContentView>
