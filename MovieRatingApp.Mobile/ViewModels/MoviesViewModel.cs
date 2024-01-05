@@ -19,6 +19,7 @@ namespace MovieRatingApp.Mobile.ViewModels
         {
             Movies = new ObservableCollection<Movie>();
 
+            //TO DO: ViewModel requires parameterless constructor. Implement workaround to use DI.
             var configService = new ConfigurationService();
             _movieApiConfig = ConfigurationService.GetConfiguration<AppConfig>("appsettings.json").MovieApi;
         }
@@ -40,7 +41,7 @@ namespace MovieRatingApp.Mobile.ViewModels
             IsLoading = true;
             try
             {
-                string apiKey = _movieApiConfig.ApiKey;
+                string apiKey = _movieApiConfig.ApiKey; //TO DO extract in secure vault
                 string rqUrl = _movieApiConfig.RequestUrl;
                 string url = rqUrl.Replace("{apiKey}", apiKey);
 
@@ -61,6 +62,7 @@ namespace MovieRatingApp.Mobile.ViewModels
             }
             catch(HttpRequestException e)
             {
+                //TO DO refactor with DI
                 AppLogger.LogError(e, "Unable to load movies.");
             }
             finally
