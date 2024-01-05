@@ -20,7 +20,7 @@ public class NativeRatingView : LinearLayout
         _value = value;
         this.RemoveAllViews();
 
-        int imageSizeInDp = 24;
+        int imageSizeInDp = 35;
         float scale = Context.Resources.DisplayMetrics.Density;
         int imageSizeInPx = (int)(imageSizeInDp * scale + 0.5f);
 
